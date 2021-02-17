@@ -4,14 +4,64 @@ namespace IsThisOrganismPathogenic
 {
     class IsThisOrganismPathogenic
     {
+        static void handleOral(string pathogenHolder)
+        {
+            if (pathogenHolder == "Staphylococcus aureus" || pathogenHolder == "Streptococcus pyogenes")
+            {
+                Console.WriteLine("This a pathogen when isolated from this body site.");
+            }
+            else
+            {
+                Console.WriteLine("This bacteria is either normal flora, a contaminant, or not a common pathogen");
+                Console.WriteLine("normally isolated from this site");
+            }
+        }
+
+
         static void Main(string[] args)
         {
+            //This program will identify if your bacterial species is pathogenic, depending on the
+            //site it is found on the patient's body, as it would be done in a clinical laboratory
+
+            string PathogenLocation;
+            string Pathogen;
+
             Console.WriteLine("This program will identify if your bacterial species is pathogenic depending on the ");
             Console.WriteLine("site it is found, please enter where your bacterial isolate was found");
-            Console.WriteLine("Your options are: Oral, urinary, ear, eye, skin, or enteric.");
-            String PathogenLocation = Console.ReadLine();
+            Console.WriteLine("Your options are: oral, urinary, ear, eye, skin, or enteric.");
+            PathogenLocation = Console.ReadLine();
+            Console.WriteLine(" Please enter the name of your bacterial organism.");
+            Pathogen = Console.ReadLine();
             
-            switch 
+
+            switch (PathogenLocation)
+            {
+                case "oral":
+                case "o":
+                    handleOral(Pathogen);
+
+                    break ;
+                case "urinary":
+                case "u":
+                    //handleUrinary();
+                    break;
+                case "ear":
+                case "ea":
+                    //handleEar();
+                    break;
+                case "eye":
+                case "ey":
+                    //handleEye();
+                    break;
+                case "skin":
+                case "s":
+                    //handleSkin();
+                    break;
+                case "enteric":
+                case "e":
+                    //handleEnteric);
+                    break;
+            }
         }
     }
 }
