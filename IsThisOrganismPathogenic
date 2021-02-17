@@ -1,0 +1,17 @@
+using System;
+
+namespace IsThisOrganismPathogenic
+{
+    class IsThisOrganismPathogenic
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("This program will identify if your bacterial species is pathogenic depending on the ");
+            Console.WriteLine("site it is found, please enter where your bacterial isolate was found");
+            Console.WriteLine("Your options are: Oral, urinary, ear, eye, skin, or enteric.");
+            String PathogenLocation = Console.ReadLine();
+            
+            switch 
+        }
+    }
+}
